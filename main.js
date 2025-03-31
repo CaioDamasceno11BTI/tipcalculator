@@ -62,4 +62,18 @@ function calculate() {
     }
 }
 
+function reset() {
+    bill = 0;
+    tipPercentage = 0;
+    numberOfPeople = 0;
+    buttonSelected = null;
 
+    document.querySelector("#bill").value = "";
+    document.querySelector("#people").value = "";
+    document.querySelector("#custom-tip").value = "";
+
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(button => button.classList.remove("button-selected"));
+
+    calculate();
+}
